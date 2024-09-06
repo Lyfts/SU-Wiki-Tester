@@ -76,4 +76,4 @@ jobs:
 
       - name: Test no prerelease dependencies used
         run: |
-          ! grep -E -- "-pre(?!shadow)" dependencies.gradle*
+          ! grep -E -- "\\*-pre((?!shadow))\\*" dependencies.gradle*

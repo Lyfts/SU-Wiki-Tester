@@ -1,0 +1,15 @@
+name: Stop grepping my preshadow
+
+on:
+ workflow_dispatch:
+
+jobs:
+  get-a-grep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Stop grepping my preshadow
+        shell: bash
+        run: |
+          ! grep -E -- "\\*-pre((?!shadow))\\*" dependencies.gradle*
