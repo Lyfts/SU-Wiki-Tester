@@ -12,4 +12,4 @@ jobs:
       - name: Stop grepping my preshadow
         shell: bash
         run: |
-          ! grep -E -- "\\*-pre((?!shadow))\\*" dependencies.gradle*
+          ! grep -E -- "-pre" dependencies.gradle*
